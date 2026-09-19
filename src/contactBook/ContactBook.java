@@ -20,6 +20,14 @@ public class ContactBook {
         return searchIndex(name) >= 0;
     }
 
+    public String numberExists(int number){
+        for (int i = 0; i < counter; i++) {
+            if (contacts[i].getPhone() == number)
+                return contacts[i].getName();
+        }
+        return null;
+    }
+
     public int getNumberOfContacts() {
         return counter;
     }
