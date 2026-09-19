@@ -88,6 +88,18 @@ public class ContactBook {
         contacts = tmp;
     }
 
+    public boolean hasContactWithSamePhone () {
+        for (int i = 0; i < counter; i++) {
+            int phoneI = contacts[i].getPhone();
+            for (int j = i + 1; j < counter; j++) {
+                if (phoneI == contacts[j].getPhone()) {
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+
     public void initializeIterator() {
         currentContact = 0;
     }
